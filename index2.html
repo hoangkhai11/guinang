@@ -70,16 +70,16 @@
 <body>
   <div class="card">
      <img src="https://i.imgflip.com/67czb7.jpg?a484896" class="cat-meme" alt="Meme mèo cute" >
-    <h1>Hôm nay em cảm thấy thế nào? 💖</h1>
+    <h1>Hôm nay chị cảm thấy thế nào? 💖</h1>
     <select id="feeling">
-      <option value="">-- Chọn cảm xúc của em --</option>
+      <option value="">-- Chọn cảm xúc của chị --</option>
       <option value="vui">Vui vẻ 😊</option>
       <option value="buon">Hơi buồn 😢</option>
       <option value="met">Mệt mỏi 😔</option>
-      <option value="yeuanh">Nhớ anh quá 🥺</option>
+      <option value="yeuanh">Nhớ em quá 🥺</option>
     </select>
     <br>
-    <button onclick="showMessage()">Gửi lời cho em</button>
+    <button onclick="showMessage()">Gửi lời cho chị</button>
     <div class="message" id="messageBox"></div>
   </div>
 
@@ -92,38 +92,23 @@
 
       switch(feeling) {
         case "vui":
-          message = "Anh vui cùng em nhé! Luôn giữ nụ cười đó nha 💕";
+          message = "Tui vui cùng nàng nhé! Luôn giữ nụ cười đó nha 💕";
           break;
         case "buon":
-          message = "Anh ở đây để lắng nghe em. Đừng buồn nữa, có anh mà 🥺💖";
+          message = "Em ở đây để lắng nghe chị. Đừng buồn nữa, có em ở đây mà 🥺💖";
           break;
         case "met":
-          message = "Em nhớ nghỉ ngơi nhé. Anh thương em nhiều lắm 💤❤️";
+          message = "Nàng nhớ nghỉ ngơi nhé. Tui thương 💤❤️";
           break;
         case "yeuanh":
-          message = "Anh cũng nhớ em quá trời luôn 😘 Mình sắp gặp nhau rồi nhaaa!";
+          message = "Tui cũng nhớ nàng quá trời luôn :> Mình sắp gặp nhau rồi nhaaa!";
           break;
         default:
-          message = "Em chọn cảm xúc đi đãaa 😘";
+          message = "Chị chọn cảm xúc đi đãaa :3 ";
       }
 
       messageBox.innerText = message;
     }
-
-    // Trái tim bay
-    const heartContainer = document.getElementById("hearts");
-    setInterval(() => {
-      const heart = document.createElement("div");
-      heart.classList.add("heart");
-      heart.innerText = "❤️";
-      heart.style.left = Math.random() * 100 + "vw";
-      heart.style.animationDuration = 3 + Math.random() * 2 + "s";
-      heartContainer.appendChild(heart);
-
-      setTimeout(() => {
-        heart.remove();
-      }, 5000);
-    },400);
     </script>
     </body>
     </html>
